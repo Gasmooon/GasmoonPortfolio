@@ -176,7 +176,8 @@
 									<span>Figma / Miro</span>
 								</div>
 							</div>
-							<h4>Habilidades técnicas</h4>
+							<div class="skill-group">
+								<h4>Habilidades técnicas</h4>
 								<div class="skill-tags">
 									<span>C# (Unity)</span>
 									<span>Blueprints (Unreal)</span>
@@ -184,7 +185,8 @@
 									<span>Prototipado de mecánicas</span>
 									<span>Debugging en motor</span>
 								</div>
-							</div>
+							</div>	
+					</div>
 					</div>
 
 					<div class="about-card about-links">
@@ -574,8 +576,8 @@
 	nav {
 		display: flex;
 		align-items: center;
-		gap: 120px;
-		font-size: 12px;
+		gap: 24px;
+		font-size: 16px;
 		color: #d3cbdc;
 	}
 
@@ -592,9 +594,8 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 40px;
-		padding: 0 16px;
-		scale: 2.1;
+		min-height: 44px;
+		padding: 8px 22px;
 		border: 1px solid #a77bd988;
 		border-radius: 3px;
 		background: #7b4ca52e;
@@ -1288,14 +1289,87 @@
 		text-align: center;
 	}
 
-	@media (max-width: 650px) {
+	@media (max-width: 768px) {
 		.site-header,
 		footer {
-			padding: 22px 6%;
+			padding: 18px 5%;
+			gap: 12px;
+		}
+
+		.brand {
+			font-size: 14px;
+			letter-spacing: 2px;
+		}
+
+		nav {
+			gap: 8px;
+			font-size: 12px;
+		}
+
+		.nav-section-link {
+			min-height: 36px;
+			padding: 6px 12px;
+		}
+
+		/* Evita que los marcos se salgan de la pantalla al hacer zoom */
+		.focusable,
+		.focusable.is-focused {
+			transform: none;
+		}
+
+		.hero {
+			min-height: auto;
+			width: calc(100% - 24px);
+			margin: 18px auto;
+			padding: 42px 20px 24px;
+		}
+
+		/* Apila el avatar arriba del nombre para que nunca se desborde */
+		.hero-identity {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			gap: 16px;
+			width: 100%;
+		}
+
+		.avatar {
+			width: 96px;
+		}
+
+		h1 {
+			margin: 8px 0 12px;
+			font-size: clamp(40px, 13vw, 64px);
+			letter-spacing: -2px;
+		}
+
+		.role {
+			font-size: 11px;
+			letter-spacing: 1.5px;
+		}
+
+		.hero-footer {
+			flex-direction: column;
+			gap: 8px;
+			padding-top: 28px;
+			font-size: 10px;
+		}
+
+		.projects,
+		.about {
+			width: calc(100% - 24px);
+			margin: 18px auto;
+			padding: 40px 20px;
+		}
+
+		.section-heading {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 10px;
+			margin-bottom: 24px;
 		}
 
 		.project-track {
-			grid-auto-columns: minmax(220px, 78%);
+			grid-auto-columns: minmax(220px, 82%);
 			gap: 12px;
 		}
 
@@ -1309,69 +1383,8 @@
 		}
 
 		.project-detail-media {
-			position: relative;
-			overflow: hidden;
-			min-height: 200px;
+			min-height: 180px;
 			aspect-ratio: 16 / 10;
-		}
-
-		nav {
-			gap: 8px;
-			font-size: 11px;
-		}
-
-		.nav-section-link {
-			min-height: 36px;
-			padding: 0 11px;
-			scale: 1.2;
-		}
-
-		.hero {
-			min-height: 640px;
-			width: calc(100% - 10%);
-			margin: 25px auto;
-			padding: 90px 7% 25px;
-		}
-
-		.parallax-art img {
-			right: -8vw;
-			width: 90vw;
-		}
-
-		.parallax-art img.triskelion-layer {
-			top: 50%;
-			right: auto;
-			left: 3vw;
-			width: 105vw;
-		}
-
-		.hero-identity {
-			gap: 18px;
-		}
-
-		.avatar {
-			width: 112px;
-		}
-
-		h1 {
-			letter-spacing: -3px;
-		}
-
-		.role {
-			font-size: 11px;
-			letter-spacing: 1.5px;
-		}
-
-		.hero-footer {
-			flex-direction: column;
-			font-size: 10px;
-		}
-
-		.projects,
-		.about {
-			width: calc(100% - 10%);
-			margin: 25px auto;
-			padding: 55px 7%;
 		}
 
 		.about-layout {
@@ -1388,12 +1401,19 @@
 		}
 
 		.about-heading {
-			margin-bottom: 28px;
+			margin-bottom: 24px;
 		}
 
-		.section-heading {
-			align-items: flex-start;
-			flex-direction: column;
+		.parallax-art img {
+			right: -8vw;
+			width: 90vw;
+		}
+
+		.parallax-art img.triskelion-layer {
+			top: 50%;
+			right: auto;
+			left: 3vw;
+			width: 105vw;
 		}
 
 		footer {
