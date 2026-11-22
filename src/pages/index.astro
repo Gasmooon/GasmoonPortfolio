@@ -1,16 +1,1421 @@
+
 ---
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#08070d" />
+		<meta name="description" content="Daniel Guzmán — Level Designer & Technical Designer. Explorando mundos, construyendo experiencias." />
+		<title>Gasmoon | Daniel Guzmán</title>
 	</head>
+
 	<body>
-		<h1>Astro</h1>
+		<div class="parallax-art" aria-hidden="true">
+			<img class="triskelion-background" src="/FondoTriskelion.png" alt="" />
+			<img class="triskelion-layer triskelion-layer--passive" src="/triskelion6.png" alt="" />
+			<img class="triskelion-layer triskelion-layer--dynamic-scale" src="/triskelion5.png" alt="" />
+			<img class="triskelion-layer triskelion-layer--deepest" src="/triskelion4.png" alt="" />
+			<img class="triskelion-layer triskelion-layer--rear" src="/triskelion3.png" alt="" />
+			<img class="triskelion-layer triskelion-layer--back" src="/triskelion2.png" alt="" />
+			<img class="triskelion-layer triskelion-layer--front" src="/triskelion1.png" alt="" />
+			<img src="/dovazulWord1.png" alt="" />
+			<img src="/dovazulWord2.png" alt="" />
+		</div>
+		<div class="background-glow"></div>
+
+		<header class="site-header">
+			<a class="brand" href="#home">GASMOON<span>.</span></a>
+
+			<nav aria-label="Navegación principal">
+				<a class="nav-section-link" href="#projects">Proyectos</a>
+				<a class="nav-section-link" href="#about">Sobre mí</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero" id="home">
+				<p class="eyebrow"><span></span> GAME DEVELOPMENT PORTFOLIO</p>
+
+				<div class="hero-identity">
+					<h1>DANIEL<br /><span>GUZMÁN</span></h1>
+					<button class="avatar" type="button" aria-label="Girar el avatar para ver la otra cara" aria-pressed="false">
+						<span class="avatar-flipper" aria-hidden="true">
+							<span class="avatar-face avatar-front"></span>
+							<span class="avatar-face avatar-back"></span>
+						</span>
+					</button>
+				</div>
+
+				<p class="role">DESARROLLADOR DE VIDEOJUEGOS</p>
+
+				<p class="intro">Me enfoco en crear niveles que combinan exploración, composición visual y mecánicas de juego, transformando ideas en espacios interactivos con propósito.</p>
+				<p class="hero-invitation">¿Quieres conocer más sobre mi trabajo? Sigue explorando.</p>
+
+				<a class="primary-button" href="#projects">
+					Ver proyectos <span>↓</span>
+				</a>
+
+				<div class="hero-footer">
+					<span>UNITY · UNREAL ENGINE</span>
+					<span>COLOMBIA <span class="separator">/</span> AVAILABLE FOR OPPORTUNITIES</span>
+				</div>
+			</section>
+
+			<section class="projects" id="projects">
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">01 / SELECTED WORK</p>
+						<h2>Proyectos<span>.</span></h2>
+					</div>
+					<p>Los mundos que he ayudado a construir.</p>
+				</div>
+
+				<div class="project-gallery-controls">
+					<p class="gallery-hint">DESLIZA PARA EXPLORAR <span>↔</span></p>
+					<div>
+						<button class="gallery-arrow" type="button" data-gallery-step="-1" aria-label="Desplazar proyectos hacia la izquierda">←</button>
+						<button class="gallery-arrow" type="button" data-gallery-step="1" aria-label="Desplazar proyectos hacia la derecha">→</button>
+					</div>
+				</div>
+
+				<div class="project-track" role="region" tabindex="0" aria-label="Galería horizontal de proyectos">
+					<button class="project-card" type="button" data-project-title="BUNRAKU" data-project-description="Brawler multijugador de ritmo rápido para hasta 8 jugadores, con combates ninja en arenas locales o en línea." data-project-areas="Diseño de niveles 2D · Pruebas de jugabilidad · QA" data-project-url="https://store.steampowered.com/app/2519170/Bunraku/" data-project-image="/bunraku-screenshot.png" data-project-link-label="Ver en Steam" style="--project-color: #54277b" aria-label="Abrir ficha del proyecto BUNRAKU">
+						<span class="project-card-art"></span>
+						<span class="project-card-meta"><span>PROJECT_001</span><span>↗</span></span>
+						<strong>BUNRAKU</strong>
+						<span class="project-card-note">Brawler multijugador · Hasta 8 jugadores</span>
+					</button>
+					<button class="project-card" type="button" data-project-title="PROYECTO_002" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Narrativa espacial · Prototipado" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #263b70" aria-label="Abrir ficha del proyecto 2">
+						<span class="project-card-art"></span>
+						<span class="project-card-meta"><span>PROJECT_002</span><span>↗</span></span>
+						<strong>Nombre del proyecto</strong>
+						<span class="project-card-note">Haz clic para agregar detalles</span>
+					</button>
+					<button class="project-card" type="button" data-project-title="PROYECTO_003" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Mecánicas · Iteración" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #594125" aria-label="Abrir ficha del proyecto 3">
+						<span class="project-card-art"></span>
+						<span class="project-card-meta"><span>PROJECT_003</span><span>↗</span></span>
+						<strong>Nombre del proyecto</strong>
+						<span class="project-card-note">Haz clic para agregar detalles</span>
+					</button>
+					<button class="project-card" type="button" data-project-title="PROYECTO_004" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Iluminación · Colaboración" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #31564d" aria-label="Abrir ficha del proyecto 4">
+						<span class="project-card-art"></span>
+						<span class="project-card-meta"><span>PROJECT_004</span><span>↗</span></span>
+						<strong>Nombre del proyecto</strong>
+						<span class="project-card-note">Haz clic para agregar detalles</span>
+					</button>
+				</div>
+
+				<article class="project-detail" hidden aria-live="polite">
+					<div class="project-detail-topbar">
+						<span class="detail-index">PROJECT_001</span>
+						<button class="detail-close" type="button" aria-label="Cerrar ficha del proyecto">×</button>
+					</div>
+					<div class="project-detail-content">
+						<div class="project-detail-media" role="img" aria-label="Espacio reservado para imagen o video del proyecto">
+							<img class="detail-image" alt="" hidden />
+							<div class="media-placeholder"><span>MEDIA_PLACEHOLDER</span><small>Reemplaza este bloque con una imagen o video</small></div>
+						</div>
+						<div class="project-detail-copy">
+							<p class="eyebrow">PROJECT OVERVIEW</p>
+							<h3 class="detail-title">Nombre del proyecto</h3>
+							<p class="detail-description">Escribe aquí una breve descripción del proyecto y del mundo que construiste.</p>
+							<p class="detail-label">MI PARTICIPACIÓN</p>
+							<p class="detail-areas">Diseño de niveles · Blockout · Documentación</p>
+							<a class="detail-link" href="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" target="_blank" rel="noopener noreferrer">Ver proyecto <span>↗</span></a>
+						</div>
+					</div>
+					<div class="project-detail-navigation">
+						<button class="detail-step" type="button" data-detail-step="-1">← Anterior</button>
+						<span class="detail-count">01 / 04</span>
+						<button class="detail-step" type="button" data-detail-step="1">Siguiente →</button>
+					</div>
+				</article>
+			</section>
+
+			<section class="about" id="about">
+				<div class="about-heading">
+					<p class="eyebrow">02 / THE CREATOR</p>
+					<h2>Diseñar espacios.<br /><span>Crear experiencias.</span></h2>
+				</div>
+
+				<div class="about-layout">
+					<div class="about-profile">
+						<h3>Perfil profesional</h3>
+						<p>Como desarrollador de videojuegos formado en el SENA y en el bootcamp de Unity de Generation, he tenido la oportunidad de trabajar tanto en estudios independientes como en Efecto Studios. Me especializo en dar forma a espacios jugables, abarcando desde los primeros blockouts hasta la integración de assets y pruebas de jugabilidad.</p>
+						<p>Lo que más disfruto es el proceso creativo de iterar un nivel hasta que se sienta intuitivo, vivo y atractivo para quien lo juega. Aunque mi fuerte está en el diseño técnico de niveles, conservo una mentalidad generalista que me permite apoyar en distintas áreas del desarrollo según lo que requiera el proyecto.</p>
+						<p class="signature">Daniel Guzmán <span>— Gasmoon</span></p>
+					</div>
+
+					<div class="about-card about-skills">
+						<div class="about-card-heading">
+							<p class="eyebrow">CAPACIDADES</p>
+							<h3>Skills</h3>
+						</div>
+						<div class="skill-groups">
+							<div class="skill-group">
+								<h4>Diseño de niveles</h4>
+								<div class="skill-tags">
+									<span>Blockout y Greyboxing</span>
+									<span>Narrativa ambiental</span>
+									<span>Pacing y flujo espacial</span>
+									<span>Diseño de encuentros</span>
+									<span>Playtesting e iteración</span>
+									<span>Documentación (LDD)</span>
+								</div>
+							</div>
+							<div class="skill-group">
+								<h4>Herramientas</h4>
+								<div class="skill-tags">
+									<span>Unity</span>
+									<span>Unreal Engine</span>
+									<span>Blender</span>
+									<span>Git / GitHub</span>
+									<span>Jira / Trello</span>
+									<span>Figma / Miro</span>
+								</div>
+							</div>
+							<h4>Habilidades técnicas</h4>
+								<div class="skill-tags">
+									<span>C# (Unity)</span>
+									<span>Blueprints (Unreal)</span>
+									<span>QA y reporte de bugs</span>
+									<span>Prototipado de mecánicas</span>
+									<span>Debugging en motor</span>
+								</div>
+							</div>
+					</div>
+
+					<div class="about-card about-links">
+						<div class="about-card-heading">
+							<p class="eyebrow">CONTACTO Y CV</p>
+							<h3>Enlaces</h3>
+						</div>
+						<div class="about-links-list">
+							<a class="about-link" href="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" target="_blank" rel="noopener noreferrer">
+								<span>LinkedIn</span><span>Visita mi perfil ↗</span>
+							</a>
+							<a class="about-link" href="mailto:danguzp3216@gmail.com">
+								<span>Correo electrónico</span><span>danguzp3216@gmail.com ↗</span>
+							</a>
+							<a class="about-link about-cv-link" href="/Daniel_Alejandro_Guzman_CV.pdf" download="Daniel_Alejandro_Guzman_CV.pdf">
+								<span>Currículum</span><span>Descargar CV (PDF) ↓</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<a class="brand" href="#home">GASMOON<span>.</span></a>
+			<p>Diseñado con intención. Construido para explorar.</p>
+			<span>© 2026 DANIEL GUZMÁN</span>
+		</footer>
 	</body>
 </html>
+
+<script>
+	const sections = Array.from(document.querySelectorAll<HTMLElement>("main > section"));
+	const visibility = new Map<HTMLElement, number>();
+
+	sections.forEach((section) => {
+		section.classList.add("focusable");
+		visibility.set(section, 0);
+	});
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				visibility.set(entry.target as HTMLElement, entry.intersectionRatio);
+			});
+
+			const focusedSection = sections.reduce<HTMLElement | null>((focused, section) => {
+				if (!focused || (visibility.get(section) ?? 0) > (visibility.get(focused) ?? 0)) {
+					return section;
+				}
+				return focused;
+			}, null);
+
+			sections.forEach((section) => {
+				section.classList.toggle("is-focused", section === focusedSection && (visibility.get(section) ?? 0) > 0);
+			});
+		},
+		{ rootMargin: "-35% 0px -35% 0px", threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] },
+	);
+
+	sections.forEach((section) => observer.observe(section));
+</script>
+
+<script>
+	const avatar = document.querySelector<HTMLButtonElement>(".avatar");
+
+	avatar?.addEventListener("click", () => {
+		const wasFlipped = avatar.classList.contains("is-flipped");
+		const flipper = avatar.querySelector<HTMLElement>(".avatar-flipper");
+		const startAngle = wasFlipped ? 180 : 0;
+		const endAngle = wasFlipped ? 0 : 180;
+
+		flipper?.getAnimations().forEach((animation) => animation.cancel());
+		const isFlipped = avatar.classList.toggle("is-flipped");
+		avatar.setAttribute("aria-pressed", String(isFlipped));
+		avatar.setAttribute("aria-label", isFlipped ? "Volver a la foto de perfil" : "Girar el avatar para ver la otra cara");
+
+		if (flipper && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			flipper.animate(
+				[
+					{ transform: `rotateY(${startAngle}deg) scale(1) translateY(0)` },
+					{
+						offset: 0.42,
+						transform: `rotateY(${startAngle + (endAngle - startAngle) * 0.5}deg) scale(1.3) translateY(-18px)`,
+					},
+					{
+						offset: 0.62,
+						transform: `rotateY(${startAngle + (endAngle - startAngle) * 0.72}deg) scale(1.3) translateY(-18px)`,
+					},
+					{
+						offset: 0.9,
+						transform: `rotateY(${endAngle}deg) scale(1.04) translateY(-3px)`,
+					},
+					{
+						offset: 0.96,
+						transform: `rotateY(${endAngle}deg) scale(0.96) translateY(2px)`,
+					},
+					{ transform: `rotateY(${endAngle}deg) scale(1) translateY(0)` },
+				],
+				{ duration: 850, easing: "cubic-bezier(0.2, 0.75, 0.25, 1)" },
+			);
+		}
+	});
+</script>
+
+<script>
+	const projectCards = Array.from(document.querySelectorAll<HTMLButtonElement>(".project-card"));
+	const projectDetail = document.querySelector<HTMLElement>(".project-detail");
+	let galleryIndex = 0;
+	let selectedProjectIndex = 0;
+
+	const showProject = (index: number, scrollToCard = true, scrollToDetail = false) => {
+		if (!projectCards.length || !projectDetail) return;
+		selectedProjectIndex = (index + projectCards.length) % projectCards.length;
+		const card = projectCards[selectedProjectIndex];
+		const title = card.dataset.projectTitle ?? "PROYECTO";
+		const description = card.dataset.projectDescription ?? "Añade una descripción para este proyecto.";
+		const areas = card.dataset.projectAreas ?? "Añade aquí tu participación.";
+		const url = card.dataset.projectUrl ?? "#";
+
+		projectDetail.querySelector(".detail-index")!.textContent = title;
+		projectDetail.querySelector(".detail-title")!.textContent = card.querySelector("strong")?.textContent ?? "Nombre del proyecto";
+		projectDetail.querySelector(".detail-description")!.textContent = description;
+		projectDetail.querySelector(".detail-areas")!.textContent = areas;
+		const projectLink = projectDetail.querySelector<HTMLAnchorElement>(".detail-link")!;
+		projectLink.href = url;
+		projectLink.firstChild!.textContent = `${card.dataset.projectLinkLabel ?? "Ver proyecto"} `;
+		const media = projectDetail.querySelector<HTMLElement>(".project-detail-media")!;
+		media.style.backgroundColor = card.style.getPropertyValue("--project-color");
+		const image = projectDetail.querySelector<HTMLImageElement>(".detail-image")!;
+		const placeholder = projectDetail.querySelector<HTMLElement>(".media-placeholder")!;
+		const imagePath = card.dataset.projectImage;
+		image.hidden = !imagePath;
+		placeholder.hidden = Boolean(imagePath);
+		if (imagePath) {
+			image.src = imagePath;
+			image.alt = `Captura de ${title}`;
+		} else {
+			image.removeAttribute("src");
+			image.alt = "";
+		}
+		const cardArt = card.querySelector<HTMLElement>(".project-card-art");
+		if (cardArt && imagePath) cardArt.style.backgroundImage = `url("${imagePath}")`;
+		projectDetail.querySelector(".detail-count")!.textContent = `${String(selectedProjectIndex + 1).padStart(2, "0")} / ${String(projectCards.length).padStart(2, "0")}`;
+		projectDetail.hidden = false;
+
+		if (scrollToCard) card.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+		if (scrollToDetail) requestAnimationFrame(() => projectDetail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
+	};
+
+	projectCards.forEach((card, index) => {
+		const imagePath = card.dataset.projectImage;
+		const cardArt = card.querySelector<HTMLElement>(".project-card-art");
+		if (cardArt && imagePath) cardArt.style.backgroundImage = `url("${imagePath}")`;
+		card.addEventListener("click", () => {
+			galleryIndex = index;
+			showProject(index, false, true);
+		});
+	});
+
+	document.querySelectorAll<HTMLButtonElement>("[data-gallery-step]").forEach((button) => {
+		button.addEventListener("click", () => {
+			const step = Number(button.dataset.galleryStep);
+			galleryIndex = (galleryIndex + step + projectCards.length) % projectCards.length;
+			const nextCard = projectCards[galleryIndex];
+			nextCard?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+		});
+	});
+
+	document.querySelectorAll<HTMLButtonElement>("[data-detail-step]").forEach((button) => {
+		button.addEventListener("click", () => showProject(selectedProjectIndex + Number(button.dataset.detailStep)));
+	});
+
+	projectDetail?.querySelector<HTMLButtonElement>(".detail-close")?.addEventListener("click", () => {
+		projectDetail.hidden = true;
+		projectCards[selectedProjectIndex]?.focus();
+	});
+</script>
+
+<script>
+	const parallaxImages = Array.from(document.querySelectorAll<HTMLImageElement>(".parallax-art img:not(.triskelion-layer)"));
+	const triskelionLayers = [
+		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--passive"), degreesPerPixel: 0, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: -0.03 },
+		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--dynamic-scale"), degreesPerPixel: 0.007, minScale: 0.85, maxScale: 1.25, autoDegreesPerFrame: 0 },
+		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--deepest"), degreesPerPixel: 0.007, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
+		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--rear"), degreesPerPixel: -0.007, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
+		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--back"), degreesPerPixel: 0.1, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
+		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--front"), degreesPerPixel: 0.12, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
+	];
+	let parallaxFrame = false;
+	let lastScrollY = window.scrollY;
+	let pendingScrollDistance = 0;
+	const triskelionRotations = triskelionLayers.map(() => 0);
+
+	if ((parallaxImages.length || triskelionLayers.some(({ image }) => image)) && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+		const updateParallax = () => {
+			const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+			const progress = maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 0;
+			parallaxImages.forEach((image) => {
+				const imageHeight = image.getBoundingClientRect().height;
+				const lowerLimit = Math.min(0, window.innerHeight - imageHeight);
+				const horizontalOffset = image.classList.contains("triskelion-background") ? "-50%" : "0";
+				image.style.transform = `translate3d(${horizontalOffset}, ${lowerLimit * progress}px, 0)`;
+			});
+			triskelionLayers.forEach(({ image, degreesPerPixel, minScale, maxScale }, index) => {
+				triskelionRotations[index] += pendingScrollDistance * degreesPerPixel;
+				if (image) {
+					const scale = minScale + (maxScale - minScale) * progress;
+					image.style.transform = `translate3d(-50%, -50%, 0) rotate(${triskelionRotations[index]}deg) scale(${scale})`;
+				}
+			});
+			pendingScrollDistance = 0;
+		};
+
+		const scheduleParallax = (scrollChanged = false) => {
+			if (scrollChanged) {
+				const currentScrollY = window.scrollY;
+				pendingScrollDistance += Math.abs(currentScrollY - lastScrollY);
+				lastScrollY = currentScrollY;
+			}
+			if (parallaxFrame) return;
+			parallaxFrame = true;
+			window.requestAnimationFrame(() => {
+				updateParallax();
+				parallaxFrame = false;
+			});
+		};
+
+		window.addEventListener("scroll", () => scheduleParallax(true), { passive: true });
+		window.addEventListener("resize", scheduleParallax);
+		parallaxImages.forEach((image) => image.addEventListener("load", scheduleParallax, { once: true }));
+		triskelionLayers.forEach(({ image }) => image?.addEventListener("load", scheduleParallax, { once: true }));
+		scheduleParallax();
+
+		const passiveLayerIndex = triskelionLayers.findIndex(({ autoDegreesPerFrame }) => autoDegreesPerFrame !== 0);
+		if (passiveLayerIndex >= 0) {
+			let previousFrameTime: number | null = null;
+			const rotatePassiveLayer = (timestamp: number) => {
+				const layer = triskelionLayers[passiveLayerIndex];
+				if (previousFrameTime !== null && layer.image) {
+					const elapsedFrames = Math.min(timestamp - previousFrameTime, 50) / (1000 / 60);
+					triskelionRotations[passiveLayerIndex] += layer.autoDegreesPerFrame * elapsedFrames;
+					layer.image.style.transform = `translate3d(-50%, -50%, 0) rotate(${triskelionRotations[passiveLayerIndex]}deg) scale(${layer.minScale})`;
+				}
+				previousFrameTime = timestamp;
+				window.requestAnimationFrame(rotatePassiveLayer);
+			};
+			window.requestAnimationFrame(rotatePassiveLayer);
+		}
+	}
+</script>
+
+<style>
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(html) {
+		scroll-behavior: smooth;
+		scroll-padding-top: 90px;
+	}
+
+	:global(body) {
+		position: relative;
+		isolation: isolate;
+		margin: 0;
+		background: #08070d;
+		color: #f0edf5;
+		font-family: Inter, "Segoe UI", sans-serif;
+		overflow-x: hidden;
+	}
+
+	:global(body)::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		background-image: linear-gradient(#ffffff05 1px, transparent 1px),
+			linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+		background-size: 72px 72px;
+		mask-image: linear-gradient(to bottom, black, transparent 75%);
+	}
+
+	.background-glow {
+		position: absolute;
+		top: 60px;
+		left: 50%;
+		width: 700px;
+		height: 600px;
+		transform: translateX(-50%);
+		background: radial-gradient(ellipse, #522c7a24 0%, #17102012 45%, transparent 72%);
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	.parallax-art {
+		position: fixed;
+		inset: 0;
+		z-index: -2;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	.parallax-art img {
+		position: absolute;
+		top: 0;
+		right: -3vw;
+		width: 80vw;
+		height: auto;
+		opacity: 1;
+		filter: drop-shadow(0 0 26px #2528ff88);
+		will-change: transform;
+	}
+
+	.parallax-art img.triskelion-background {
+		top: 0;
+		right: auto;
+		left: 50%;
+		width: max(110vw, 93.87vh);
+		max-width: none;
+		opacity: 0.75;
+		filter: none;
+		z-index: -5;
+	}
+
+	.parallax-art img.triskelion-layer {
+		top: 50%;
+		right: auto;
+		left: 3vw;
+		width: min(80vw, 980px);
+		opacity: 0.85;
+		transform: translate3d(-50%, -50%, 0) scale(0.85);
+		filter: drop-shadow(0 0 32px #542bffbb) drop-shadow(0 0 64px #a020ff66);
+		transform-origin: center;
+	}
+
+	.parallax-art img.triskelion-layer--back {
+		z-index: 0;
+	}
+
+	.parallax-art img.triskelion-layer--rear {
+		z-index: -1;
+	}
+
+	.parallax-art img.triskelion-layer--deepest {
+		z-index: -2;
+	}
+
+	.parallax-art img.triskelion-layer--dynamic-scale {
+		z-index: -3;
+	}
+
+	.parallax-art img.triskelion-layer--passive {
+		z-index: -4;
+	}
+
+	.parallax-art img.triskelion-layer--front {
+		z-index: 1;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.site-header,
+	footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 28px 8%;
+		border-bottom: 1px solid #ffffff12;
+	}
+
+	.brand {
+		font-size: 17px;
+		font-weight: 850;
+		letter-spacing: 3px;
+	}
+
+	.brand span,
+	.section-heading h2 span {
+		color: #b78be8;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 120px;
+		font-size: 12px;
+		color: #d3cbdc;
+	}
+
+	nav a,
+	.primary-button {
+		transition: color 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease, scale 180ms ease;
+	}
+
+	nav a:hover {
+		color: #d9b8ff;
+	}
+
+	.nav-section-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 40px;
+		padding: 0 16px;
+		scale: 2.1;
+		border: 1px solid #a77bd988;
+		border-radius: 3px;
+		background: #7b4ca52e;
+		color: #efe3fa;
+		letter-spacing: 0.5px;
+		box-shadow: 0 0 10px #9d4dff1c;
+	}
+
+	.nav-section-link:hover {
+		border-color: #d1a9f8;
+		background: #9b67c844;
+		box-shadow: 0 0 16px #9d4dff55;
+		transform: translateY(-1px);
+	}
+
+	.hero {
+		position: relative;
+		min-height: 690px;
+		max-width: 1150px;
+		width: calc(100% - 12%);
+		margin: 42px auto;
+		padding: 105px 9% 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.hero,
+	.projects,
+	.about {
+		border: 1px solid #c58affc9;
+		background: linear-gradient(135deg, #1b102980, #0c091380 58%, #130d1d80);
+		box-shadow: 0 0 0 1px #e6caff30 inset, 0 0 10px #b45cff70,
+			0 0 28px #9d4dff55, 0 0 58px #7429d52e,
+			0 18px 55px #00000066;
+		backdrop-filter: blur(14px);
+	}
+
+	.focusable {
+		opacity: 1;
+		transform: scale(0.92);
+		border-color: #c58aff70;
+		background: linear-gradient(135deg, #1b10294d, #0c09134d 58%, #130d1d4d);
+		box-shadow: 0 0 0 1px #e6caff18 inset, 0 0 6px #b45cff35,
+			0 0 18px #9d4dff28, 0 0 40px #7429d518,
+			0 18px 55px #00000055;
+		transition: transform 550ms ease, box-shadow 550ms ease, background 550ms ease, border-color 550ms ease;
+	}
+
+	.focusable.is-focused {
+		opacity: 1;
+		transform: scale(1.02);
+		border-color: #c58affc9;
+		background: linear-gradient(135deg, #1b102994, #0c091394 58%, #130d1d94);
+		box-shadow: 0 0 0 1px #e6caff30 inset, 0 0 10px #b45cff70,
+			0 0 28px #9d4dff55, 0 0 58px #7429d52e,
+			0 18px 55px #00000066;
+	}
+
+	.hero::before,
+	.projects::before,
+	.about::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 24px;
+		width: 64px;
+		height: 2px;
+		background: #e4c5ff;
+		box-shadow: 0 0 8px #e4c5ff, 0 0 20px #bd73ff, 0 0 34px #8e3eff;
+	}
+
+	.projects,
+	.about {
+		position: relative;
+		max-width: 1150px;
+		width: calc(100% - 12%);
+		margin: 32px auto;
+		padding: 72px 9%;
+		border-top: 1px solid #c58affc9;
+		border-radius: 4px;
+	}
+
+	.hero {
+		border-radius: 4px;
+	}
+
+	.eyebrow {
+		color: #b99ad9;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 3px;
+	}
+
+	.hero .eyebrow {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.hero .eyebrow span {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #c29ae8;
+		box-shadow: 0 0 12px #a66be8;
+	}
+
+	.hero-identity {
+		display: flex;
+		align-items: center;
+		gap: clamp(24px, 5vw, 68px);
+	}
+
+	.avatar {
+		width: clamp(130px, 19.5vw, 205px);
+		aspect-ratio: 1;
+		flex: 0 0 auto;
+		padding: 0;
+		border: 1px solid #dbb8ff;
+		border-radius: 50%;
+		background: transparent;
+		box-shadow: 0 0 12px #bd73ff99, 0 0 32px #8e3eff66;
+		cursor: pointer;
+		perspective: 800px;
+	}
+
+	.avatar:focus-visible {
+		outline: 2px solid #f0d9ff;
+		outline-offset: 6px;
+	}
+
+	.avatar-flipper {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		transform-style: preserve-3d;
+		transition: transform 700ms cubic-bezier(0.2, 0.75, 0.25, 1);
+	}
+
+	.avatar.is-flipped .avatar-flipper {
+		transform: rotateY(180deg);
+	}
+
+	.avatar-face {
+		position: absolute;
+		inset: 0;
+		border: 3px solid #110b19;
+		border-radius: inherit;
+		backface-visibility: hidden;
+	}
+
+	.avatar-front {
+		background: #8e45cf url("/loyd.jpg") center / cover no-repeat;
+	}
+
+	.avatar-back {
+		background: #31a4a5 url("/fotoMia.jpeg") center / cover no-repeat;
+		transform: rotateY(180deg);
+	}
+
+	h1 {
+		margin: 28px 0 18px;
+		font-size: clamp(58px, 9.5vw, 124px);
+		line-height: 0.88;
+		letter-spacing: -5px;
+		font-weight: 850;
+	}
+
+	h1 span {
+		color: transparent;
+		-webkit-text-stroke: 1px #c9b5dc;
+	}
+
+	.role {
+		color: #d7cce4;
+		font-size: 12px;
+		letter-spacing: 3px;
+	}
+
+	.role span {
+		color: #a978d8;
+		margin: 0 7px;
+	}
+
+	.intro {
+		max-width: 440px;
+		margin: 22px 0 30px;
+		color: #c4bdca;
+		font-size: 14px;
+		line-height: 1.9;
+	}
+
+.hero-invitation {
+		margin: -12px 0 22px;
+		color: #d7cce4;
+		font-size: 13px;
+		line-height: 1.6;
+	}
+
+	.primary-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 32px;
+		padding: 14px 18px;
+		border: 1px solid #a77bd9;
+		background: #7b4ca51c;
+		font-size: 12px;
+	}
+
+	.primary-button:hover {
+		background: #9b67c82e;
+		border-color: #d1a9f8;
+	}
+
+	.primary-button span {
+		color: #cda7f4;
+	}
+
+	.hero-footer {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+		margin-top: auto;
+		padding-top: 40px;
+		color: #aea5b8;
+		font-size: 11px;
+		letter-spacing: 1.5px;
+	}
+
+	.separator {
+		color: #a978d8;
+		padding: 0 7px;
+	}
+
+	.section-heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		gap: 24px;
+		margin-bottom: 35px;
+	}
+
+	.section-heading h2,
+	.about h2 {
+		margin: 12px 0 0;
+		font-size: clamp(38px, 5vw, 58px);
+		letter-spacing: -2px;
+	}
+
+	.section-heading > p {
+		color: #b9afc2;
+		font-size: 12px;
+	}
+
+	.project-gallery-controls,
+	.project-gallery-controls > div,
+	.project-card-meta,
+	.project-detail-topbar,
+	.project-detail-navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.project-gallery-controls {
+		margin: 0 0 14px;
+	}
+
+	.gallery-hint,
+	.project-card-meta,
+	.detail-index,
+	.detail-label {
+		color: #c4a5d9;
+		font-size: 11px;
+		letter-spacing: 1.8px;
+	}
+
+	.gallery-hint span {
+		color: #d6b3fb;
+		font-size: 14px;
+		margin-left: 8px;
+	}
+
+	.project-gallery-controls > div {
+		gap: 8px;
+	}
+
+	.gallery-arrow,
+	.detail-close,
+	.detail-step {
+		color: #e5d7f2;
+		border: 1px solid #a66be877;
+		background: #150e20;
+		cursor: pointer;
+		transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+	}
+
+	.gallery-arrow {
+		width: 34px;
+		height: 34px;
+		font-size: 16px;
+	}
+
+	.gallery-arrow:hover,
+	.detail-close:hover,
+	.detail-step:hover {
+		background: #713e9d66;
+		border-color: #d4a5ff;
+		color: #fff;
+	}
+
+	.project-track {
+		display: grid;
+		grid-auto-columns: minmax(220px, 27%);
+		grid-auto-flow: column;
+		gap: 18px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		padding: 8px 4px 20px;
+		scroll-snap-type: x mandatory;
+		scrollbar-color: #8e55b8 #17101f;
+		scrollbar-width: thin;
+	}
+
+	.project-card {
+		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+		padding: 14px;
+		color: #eee6f5;
+		text-align: left;
+		border: 1px solid #ac7bd755;
+		background: linear-gradient(145deg, #1a122480, #0e0a1480);
+		opacity: 0.62;
+		transform: scale(0.965);
+		scroll-snap-align: center;
+		cursor: pointer;
+		transition: opacity 350ms ease, transform 350ms ease, border-color 350ms ease, box-shadow 350ms ease;
+	}
+
+	.project-card:hover {
+		opacity: 1;
+		transform: scale(1.035);
+		border-color: #c58aff;
+		box-shadow: 0 0 18px #9d4dff55, 0 0 34px #7429d52b;
+	}
+
+	.project-card:focus-visible,
+	.gallery-arrow:focus-visible,
+	.detail-close:focus-visible,
+	.detail-step:focus-visible {
+		outline: 2px solid #e4c5ff;
+		outline-offset: 3px;
+	}
+
+	.project-card-art {
+		width: 100%;
+		aspect-ratio: 1;
+		background: var(--project-color, #54277b);
+		background-position: center;
+		background-size: cover;
+		box-shadow: 0 0 20px #00000022 inset;
+	}
+
+	.project-card-meta {
+		width: 100%;
+		font-size: 10px;
+	}
+
+	.project-card-meta span:last-child {
+		font-size: 14px;
+		color: #d1a9f8;
+	}
+
+	.project-card strong {
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	.project-card-note {
+		color: #b2a8ba;
+		font-size: 12px;
+	}
+
+	.project-detail {
+		margin-top: 16px;
+		padding: 22px;
+		border: 1px solid #c58aff99;
+		background: linear-gradient(135deg, #1b102980, #0c091380 65%, #130d1d80);
+		box-shadow: 0 0 24px #9d4dff3b, 0 0 48px #7429d522;
+		animation: detail-appear 360ms ease both;
+	}
+
+	.project-detail[hidden] {
+		display: none;
+	}
+
+	.project-detail-topbar {
+		padding-bottom: 14px;
+		border-bottom: 1px solid #ffffff16;
+	}
+
+	.detail-close {
+		width: 32px;
+		height: 32px;
+		font-size: 22px;
+		line-height: 1;
+	}
+
+	.project-detail-content {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+		align-items: center;
+		gap: clamp(24px, 5vw, 58px);
+		padding: 24px 0;
+	}
+
+	.project-detail-media {
+			position: relative;
+			overflow: hidden;
+			min-height: 200px;
+			aspect-ratio: 16 / 10;
+		}
+
+	.detail-image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.detail-image[hidden],
+	.media-placeholder[hidden] {
+		display: none;
+	}
+
+	.media-placeholder {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+	}
+
+	
+
+	.project-detail-media span {
+		font-size: 13px;
+		letter-spacing: 2px;
+	}
+
+	.project-detail-media small {
+		color: #e5d4f0;
+		font-size: 12px;
+	}
+
+	.project-detail-copy .eyebrow {
+		margin-top: 0;
+	}
+
+	.detail-title {
+		margin: 12px 0;
+		font-size: clamp(24px, 3vw, 38px);
+		font-weight: 500;
+	}
+
+	.detail-description,
+	.detail-areas {
+		color: #d0c8d6;
+		font-size: 13px;
+		line-height: 1.8;
+	}
+
+	.detail-label {
+		margin: 22px 0 4px;
+	}
+
+	.detail-areas {
+		margin-top: 5px;
+	}
+
+	.detail-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 28px;
+		margin-top: 12px;
+		padding: 11px 14px;
+		border: 1px solid #a77bd9;
+		background: #7b4ca51c;
+		font-size: 11px;
+	}
+
+	.detail-link span {
+		color: #d1a9f8;
+	}
+
+	.project-detail-navigation {
+		padding-top: 14px;
+		border-top: 1px solid #ffffff16;
+	}
+
+	.detail-step {
+		padding: 9px 12px;
+		font-size: 12px;
+	}
+
+	.detail-count {
+		color: #b7a7c2;
+		font-size: 11px;
+		letter-spacing: 1.5px;
+	}
+
+	@keyframes detail-appear {
+		from { opacity: 0; transform: translateY(12px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	.about {
+		max-width: 1150px;
+	}
+
+	.about-heading {
+		margin-bottom: 36px;
+	}
+
+	.about-heading .eyebrow {
+		margin: 0;
+	}
+
+	.about-heading h2 {
+		margin-top: 12px;
+		line-height: 1.2;
+	}
+
+	.about h2 span {
+		color: #c1accf;
+	}
+
+	.about-layout {
+		display: grid;
+		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+		align-items: start;
+		gap: clamp(28px, 5vw, 64px);
+	}
+
+	.about-profile h3,
+	.about-card-heading h3 {
+		margin: 0;
+		color: #f0e8fa;
+		font-size: 20px;
+		font-weight: 550;
+	}
+
+	.about-profile > p:not(.signature) {
+		max-width: 440px;
+		color: #c4bdca;
+		font-size: 14px;
+		line-height: 1.9;
+	}
+
+	.signature {
+		margin-top: 28px;
+		font-size: 13px;
+	}
+
+	.signature span {
+		color: #b3a4be;
+	}
+
+	.about-details {
+		display: grid;
+		gap: 16px;
+	}
+
+	.about-card {
+		padding: 20px;
+		border: 1px solid #c58aff70;
+		background: #0c09134d;
+		box-shadow: 0 0 18px #9d4dff1e inset, 0 0 18px #7429d51a;
+	}
+
+	.about-card-heading {
+		margin-bottom: 16px;
+	}
+
+	.about-card-heading .eyebrow {
+		margin: 0 0 8px;
+		letter-spacing: 2px;
+	}
+
+	.skill-groups {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.skill-group {
+		min-width: 0;
+		padding: 12px;
+		border-left: 2px solid #b978e8;
+		background: #180f235c;
+	}
+
+	.skill-group h4 {
+		margin: 0 0 10px;
+		color: #dfc6f4;
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+	.skill-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+	}
+
+	.skill-tags span {
+		padding: 6px 8px;
+		border: 1px solid #a77bd955;
+		background: #7b4ca51c;
+		color: #d7cce4;
+		font-size: 11px;
+		line-height: 1.4;
+	}
+
+	.about-links {
+		grid-column: 1 / -1;
+		display: grid;
+		gap: 8px;
+	}
+
+	.about-links .about-card-heading {
+		margin-bottom: 6px;
+		text-align: center;
+	}
+
+	.about-links-list {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.about-link {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 8px;
+		min-height: 78px;
+		padding: 11px 12px;
+		border: 1px solid #a77bd944;
+		background: #7b4ca51a;
+		color: #e8dff1;
+		font-size: 12px;
+		transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+	}
+
+	.about-link span:last-child {
+		color: #d0b1e7;
+		text-align: left;
+		overflow-wrap: anywhere;
+	}
+
+	.about-link:hover {
+		border-color: #d1a9f8;
+		background: #9b67c82e;
+		box-shadow: 0 0 14px #9d4dff30;
+	}
+
+	.about-link:focus-visible {
+		outline: 2px solid #e4c5ff;
+		outline-offset: 3px;
+	}
+
+	footer {
+		border-top: 1px solid #ffffff12;
+		border-bottom: 0;
+		gap: 20px;
+		color: #aca2b6;
+		font-size: 12px;
+	}
+
+	footer p {
+		text-align: center;
+	}
+
+	@media (max-width: 650px) {
+		.site-header,
+		footer {
+			padding: 22px 6%;
+		}
+
+		.project-track {
+			grid-auto-columns: minmax(220px, 78%);
+			gap: 12px;
+		}
+
+		.project-detail {
+			padding: 16px;
+		}
+
+		.project-detail-content {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		.project-detail-media {
+			position: relative;
+			overflow: hidden;
+			min-height: 200px;
+			aspect-ratio: 16 / 10;
+		}
+
+		nav {
+			gap: 8px;
+			font-size: 11px;
+		}
+
+		.nav-section-link {
+			min-height: 36px;
+			padding: 0 11px;
+			scale: 1.2;
+		}
+
+		.hero {
+			min-height: 640px;
+			width: calc(100% - 10%);
+			margin: 25px auto;
+			padding: 90px 7% 25px;
+		}
+
+		.parallax-art img {
+			right: -8vw;
+			width: 90vw;
+		}
+
+		.parallax-art img.triskelion-layer {
+			top: 50%;
+			right: auto;
+			left: 3vw;
+			width: 105vw;
+		}
+
+		.hero-identity {
+			gap: 18px;
+		}
+
+		.avatar {
+			width: 112px;
+		}
+
+		h1 {
+			letter-spacing: -3px;
+		}
+
+		.role {
+			font-size: 11px;
+			letter-spacing: 1.5px;
+		}
+
+		.hero-footer {
+			flex-direction: column;
+			font-size: 10px;
+		}
+
+		.projects,
+		.about {
+			width: calc(100% - 10%);
+			margin: 25px auto;
+			padding: 55px 7%;
+		}
+
+		.about-layout {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+
+		.skill-groups {
+			grid-template-columns: 1fr;
+		}
+
+		.about-links-list {
+			grid-template-columns: 1fr;
+		}
+
+		.about-heading {
+			margin-bottom: 28px;
+		}
+
+		.section-heading {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		footer {
+			flex-wrap: wrap;
+		}
+
+		footer p {
+			order: 3;
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.focusable {
+			transition: none;
+		}
+
+		.project-card,
+		.project-detail {
+			animation: none;
+			transition: none;
+		}
+	}
+</style>
