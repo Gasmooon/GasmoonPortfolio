@@ -13,13 +13,6 @@
 
 	<body>
 		<div class="parallax-art" aria-hidden="true">
-			<img class="triskelion-background" src="/FondoTriskelion.png" alt="" />
-			<img class="triskelion-layer triskelion-layer--passive" src="/triskelion6.png" alt="" />
-			<img class="triskelion-layer triskelion-layer--dynamic-scale" src="/triskelion5.png" alt="" />
-			<img class="triskelion-layer triskelion-layer--deepest" src="/triskelion4.png" alt="" />
-			<img class="triskelion-layer triskelion-layer--rear" src="/triskelion3.png" alt="" />
-			<img class="triskelion-layer triskelion-layer--back" src="/triskelion2.png" alt="" />
-			<img class="triskelion-layer triskelion-layer--front" src="/triskelion1.png" alt="" />
 			<img src="/dovazulWord1.png" alt="" />
 			<img src="/dovazulWord2.png" alt="" />
 		</div>
@@ -87,17 +80,17 @@
 						<strong>BUNRAKU</strong>
 						<span class="project-card-note">Brawler multijugador · Hasta 8 jugadores</span>
 					</button>
-					<button class="project-card" type="button" data-project-title="PROYECTO_002" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Narrativa espacial · Prototipado" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #263b70" aria-label="Abrir ficha del proyecto 2">
+					<button class="project-card" type="button" data-project-title="The Librarian's Curse" data-project-description="Proyecto de game jam de Generation con temática ATRAPADO EN UN BUCLE." data-project-areas="Artista UI · Programación UI e implementación" data-project-url="https://alospinar.itch.io/the-librarians-curse" data-project-image="/the-librarians-curse.png" data-project-link-label="Ver en itch.io" style="--project-color: #263b70" aria-label="Abrir ficha de The Librarian's Curse">
 						<span class="project-card-art"></span>
 						<span class="project-card-meta"><span>PROJECT_002</span><span>↗</span></span>
-						<strong>Nombre del proyecto</strong>
-						<span class="project-card-note">Haz clic para agregar detalles</span>
+						<strong>THE LIBRARIAN'S CURSE</strong>
+						<span class="project-card-note">Game jam · ATRAPADO EN UN BUCLE</span>
 					</button>
-					<button class="project-card" type="button" data-project-title="PROYECTO_003" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Mecánicas · Iteración" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #594125" aria-label="Abrir ficha del proyecto 3">
+					<button class="project-card" type="button" data-project-title="Totally normal 2d game" data-project-description="Proyecto de game jam de Generation con temática TWO WORLDS." data-project-areas="Programación de gameplay y UI · Implementación y debug" data-project-url="https://lordcriftey.itch.io/totally-normal-2d-game" data-project-image="/totally-normal-2d-game.png" data-project-link-label="Ver en itch.io" style="--project-color: #594125" aria-label="Abrir ficha de Totally normal 2d game">
 						<span class="project-card-art"></span>
 						<span class="project-card-meta"><span>PROJECT_003</span><span>↗</span></span>
-						<strong>Nombre del proyecto</strong>
-						<span class="project-card-note">Haz clic para agregar detalles</span>
+						<strong>TOTALLY NORMAL 2D GAME</strong>
+						<span class="project-card-note">Game jam · TWO WORLDS</span>
 					</button>
 					<button class="project-card" type="button" data-project-title="PROYECTO_004" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Iluminación · Colaboración" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #31564d" aria-label="Abrir ficha del proyecto 4">
 						<span class="project-card-art"></span>
@@ -367,46 +360,22 @@
 </script>
 
 <script>
-	const parallaxImages = Array.from(document.querySelectorAll<HTMLImageElement>(".parallax-art img:not(.triskelion-layer)"));
-	const triskelionLayers = [
-		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--passive"), degreesPerPixel: 0, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: -0.03 },
-		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--dynamic-scale"), degreesPerPixel: 0.007, minScale: 0.85, maxScale: 1.25, autoDegreesPerFrame: 0 },
-		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--deepest"), degreesPerPixel: 0.007, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
-		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--rear"), degreesPerPixel: -0.007, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
-		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--back"), degreesPerPixel: 0.1, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
-		{ image: document.querySelector<HTMLImageElement>(".triskelion-layer--front"), degreesPerPixel: 0.12, minScale: 0.85, maxScale: 0.85, autoDegreesPerFrame: 0 },
-	];
+	const parallaxImages = Array.from(document.querySelectorAll<HTMLImageElement>(".parallax-art img"));
 	let parallaxFrame = false;
-	let lastScrollY = window.scrollY;
-	let pendingScrollDistance = 0;
-	const triskelionRotations = triskelionLayers.map(() => 0);
 
-	if ((parallaxImages.length || triskelionLayers.some(({ image }) => image)) && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+	if (parallaxImages.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 		const updateParallax = () => {
 			const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 			const progress = maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 0;
+
 			parallaxImages.forEach((image) => {
 				const imageHeight = image.getBoundingClientRect().height;
 				const lowerLimit = Math.min(0, window.innerHeight - imageHeight);
-				const horizontalOffset = image.classList.contains("triskelion-background") ? "-50%" : "0";
-				image.style.transform = `translate3d(${horizontalOffset}, ${lowerLimit * progress}px, 0)`;
+				image.style.transform = `translate3d(0, ${lowerLimit * progress}px, 0)`;
 			});
-			triskelionLayers.forEach(({ image, degreesPerPixel, minScale, maxScale }, index) => {
-				triskelionRotations[index] += pendingScrollDistance * degreesPerPixel;
-				if (image) {
-					const scale = minScale + (maxScale - minScale) * progress;
-					image.style.transform = `translate3d(-50%, -50%, 0) rotate(${triskelionRotations[index]}deg) scale(${scale})`;
-				}
-			});
-			pendingScrollDistance = 0;
 		};
 
-		const scheduleParallax = (scrollChanged = false) => {
-			if (scrollChanged) {
-				const currentScrollY = window.scrollY;
-				pendingScrollDistance += Math.abs(currentScrollY - lastScrollY);
-				lastScrollY = currentScrollY;
-			}
+		const scheduleParallax = () => {
 			if (parallaxFrame) return;
 			parallaxFrame = true;
 			window.requestAnimationFrame(() => {
@@ -415,27 +384,10 @@
 			});
 		};
 
-		window.addEventListener("scroll", () => scheduleParallax(true), { passive: true });
+		window.addEventListener("scroll", scheduleParallax, { passive: true });
 		window.addEventListener("resize", scheduleParallax);
 		parallaxImages.forEach((image) => image.addEventListener("load", scheduleParallax, { once: true }));
-		triskelionLayers.forEach(({ image }) => image?.addEventListener("load", scheduleParallax, { once: true }));
 		scheduleParallax();
-
-		const passiveLayerIndex = triskelionLayers.findIndex(({ autoDegreesPerFrame }) => autoDegreesPerFrame !== 0);
-		if (passiveLayerIndex >= 0) {
-			let previousFrameTime: number | null = null;
-			const rotatePassiveLayer = (timestamp: number) => {
-				const layer = triskelionLayers[passiveLayerIndex];
-				if (previousFrameTime !== null && layer.image) {
-					const elapsedFrames = Math.min(timestamp - previousFrameTime, 50) / (1000 / 60);
-					triskelionRotations[passiveLayerIndex] += layer.autoDegreesPerFrame * elapsedFrames;
-					layer.image.style.transform = `translate3d(-50%, -50%, 0) rotate(${triskelionRotations[passiveLayerIndex]}deg) scale(${layer.minScale})`;
-				}
-				previousFrameTime = timestamp;
-				window.requestAnimationFrame(rotatePassiveLayer);
-			};
-			window.requestAnimationFrame(rotatePassiveLayer);
-		}
 	}
 </script>
 
@@ -502,51 +454,6 @@
 		will-change: transform;
 	}
 
-	.parallax-art img.triskelion-background {
-		top: 0;
-		right: auto;
-		left: 50%;
-		width: max(110vw, 93.87vh);
-		max-width: none;
-		opacity: 0.75;
-		filter: none;
-		z-index: -5;
-	}
-
-	.parallax-art img.triskelion-layer {
-		top: 50%;
-		right: auto;
-		left: 3vw;
-		width: min(80vw, 980px);
-		opacity: 0.85;
-		transform: translate3d(-50%, -50%, 0) scale(0.85);
-		filter: drop-shadow(0 0 32px #542bffbb) drop-shadow(0 0 64px #a020ff66);
-		transform-origin: center;
-	}
-
-	.parallax-art img.triskelion-layer--back {
-		z-index: 0;
-	}
-
-	.parallax-art img.triskelion-layer--rear {
-		z-index: -1;
-	}
-
-	.parallax-art img.triskelion-layer--deepest {
-		z-index: -2;
-	}
-
-	.parallax-art img.triskelion-layer--dynamic-scale {
-		z-index: -3;
-	}
-
-	.parallax-art img.triskelion-layer--passive {
-		z-index: -4;
-	}
-
-	.parallax-art img.triskelion-layer--front {
-		z-index: 1;
-	}
 
 	a {
 		color: inherit;
@@ -617,13 +524,17 @@
 		max-width: 1150px;
 		width: calc(100% - 12%);
 		margin: 42px auto;
-		padding: 105px 9% 30px;
+		padding: 105px 9% 100px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		border: 0;
+		background: transparent;
+		box-shadow: 0 0 28px #9d4dff25, 0 18px 55px #00000077;
+		backdrop-filter: blur(14px);
+		transition: transform 550ms ease, box-shadow 550ms ease, border-color 550ms ease, filter 550ms ease;
 	}
 
-	.hero,
 	.projects,
 	.about {
 		border: 1px solid #c58affc9;
@@ -654,7 +565,6 @@
 			0 0 28px #9d4dff55, 0 0 58px #7429d52e,
 			0 18px 55px #00000066;
 	}
-
 	.hero::before,
 	.projects::before,
 	.about::before {
@@ -668,6 +578,7 @@
 		box-shadow: 0 0 8px #e4c5ff, 0 0 20px #bd73ff, 0 0 34px #8e3eff;
 	}
 
+
 	.projects,
 	.about {
 		position: relative;
@@ -679,8 +590,16 @@
 		border-radius: 4px;
 	}
 
-	.hero {
-		border-radius: 4px;
+	.hero.focusable {
+		background: transparent;
+	}
+
+	.hero.focusable.is-focused,
+	.hero:hover {
+		transform: scale(1.02);
+		background: transparent;
+		filter: drop-shadow(0 0 15px #bd73ff55);
+		box-shadow: 0 0 38px #9d4dff45, 0 24px 65px #00000099;
 	}
 
 	.eyebrow {
@@ -1321,7 +1240,7 @@
 			min-height: auto;
 			width: calc(100% - 24px);
 			margin: 18px auto;
-			padding: 42px 20px 24px;
+			padding: 42px 20px 64px;
 		}
 
 		/* Apila el avatar arriba del nombre para que nunca se desborde */
@@ -1409,12 +1328,7 @@
 			width: 90vw;
 		}
 
-		.parallax-art img.triskelion-layer {
-			top: 50%;
-			right: auto;
-			left: 3vw;
-			width: 105vw;
-		}
+	
 
 		footer {
 			flex-wrap: wrap;
