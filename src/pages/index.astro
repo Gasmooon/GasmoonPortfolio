@@ -13,27 +13,39 @@
 
 	<body>
 		<div class="parallax-art" aria-hidden="true">
-			<img src="/dovazulWord1.png" alt="" />
-			<img src="/dovazulWord2.png" alt="" />
+			<img class="parallax-layer--night" src="/parallax-fondo-noche.png" alt="" decoding="async" />
+			<img class="parallax-layer--light-theme" data-src="/parallax-fondo-dia.png" alt="" decoding="async" hidden />
 		</div>
 		<div class="background-glow"></div>
 
 		<header class="site-header">
 			<a class="brand" href="#home">GASMOON<span>.</span></a>
 
-			<nav aria-label="Navegación principal">
-				<a class="nav-section-link" href="#projects">Proyectos</a>
-				<a class="nav-section-link" href="#about">Sobre mí</a>
+			<nav aria-label="Navegación principal" data-i18n-aria="navLabel">
+				<a class="nav-section-link" href="#projects" data-i18n="navProjects">Proyectos</a>
+				<a class="nav-section-link" href="#about" data-i18n="navAbout">Sobre mí</a>
 			</nav>
+			<div class="header-controls">
+				<div class="language-switch" role="group" aria-label="Language" data-i18n-aria="languageLabel">
+					<button class="language-option is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+					<span aria-hidden="true">/</span>
+					<button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+				</div>
+				<button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Usar fondo claro" data-i18n-aria="themeSwitch" data-theme-toggle>
+					<span class="theme-icon" aria-hidden="true">☾</span>
+					<span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+					<span class="theme-icon" aria-hidden="true">☼</span>
+				</button>
+			</div>
 		</header>
 
 		<main>
 			<section class="hero" id="home">
-				<p class="eyebrow"><span></span> GAME DEVELOPMENT PORTFOLIO</p>
+				<p class="eyebrow"><span></span> <span data-i18n="portfolioLabel">GAME DEVELOPMENT PORTFOLIO</span></p>
 
 				<div class="hero-identity">
 					<h1>DANIEL<br /><span>GUZMÁN</span></h1>
-					<button class="avatar" type="button" aria-label="Girar el avatar para ver la otra cara" aria-pressed="false">
+					<button class="avatar" type="button" aria-label="Girar el avatar para ver la otra cara" data-i18n-aria="avatarLabel" aria-pressed="false">
 						<span class="avatar-flipper" aria-hidden="true">
 							<span class="avatar-face avatar-front"></span>
 							<span class="avatar-face avatar-back"></span>
@@ -41,125 +53,119 @@
 					</button>
 				</div>
 
-				<p class="role">DESARROLLADOR DE VIDEOJUEGOS</p>
+				<p class="role" data-i18n="role">DESARROLLADOR DE VIDEOJUEGOS</p>
 
-				<p class="intro">Me enfoco en crear niveles que combinan exploración, composición visual y mecánicas de juego, transformando ideas en espacios interactivos con propósito.</p>
-				<p class="hero-invitation">¿Quieres conocer más sobre mi trabajo? Sigue explorando.</p>
+				<p class="intro" data-i18n="intro">Me enfoco en crear niveles que combinan exploración, composición visual y mecánicas de juego, transformando ideas en espacios interactivos con propósito.</p>
+				<p class="hero-invitation" data-i18n="heroInvitation">¿Quieres conocer más sobre mi trabajo? Sigue explorando.</p>
 
 				<a class="primary-button" href="#projects">
-					Ver proyectos <span>↓</span>
+					<span data-i18n="viewProjects">Ver proyectos</span> <span>↓</span>
 				</a>
 
 				<div class="hero-footer">
 					<span>UNITY · UNREAL ENGINE</span>
-					<span>COLOMBIA <span class="separator">/</span> AVAILABLE FOR OPPORTUNITIES</span>
+					<span>COLOMBIA <span class="separator">/</span> <span data-i18n="available">AVAILABLE FOR OPPORTUNITIES</span></span>
 				</div>
 			</section>
 
 			<section class="projects" id="projects">
 				<div class="section-heading">
 					<div>
-						<p class="eyebrow">01 / SELECTED WORK</p>
-						<h2>Proyectos<span>.</span></h2>
+						<p class="eyebrow"><span data-i18n="sectionProjects">01 / SELECTED WORK</span></p>
+						<h2><span data-i18n="projectsTitle">Proyectos</span><span>.</span></h2>
 					</div>
-					<p>Los mundos que he ayudado a construir.</p>
+					<p data-i18n="projectsSubtitle">Los mundos que he ayudado a construir.</p>
 				</div>
 
 				<div class="project-gallery-controls">
-					<p class="gallery-hint">DESLIZA PARA EXPLORAR <span>↔</span></p>
+				<p class="gallery-hint"><span data-i18n="galleryHint">DESLIZA PARA EXPLORAR</span> <span>↔</span></p>
 					<div>
-						<button class="gallery-arrow" type="button" data-gallery-step="-1" aria-label="Desplazar proyectos hacia la izquierda">←</button>
-						<button class="gallery-arrow" type="button" data-gallery-step="1" aria-label="Desplazar proyectos hacia la derecha">→</button>
+						<button class="gallery-arrow" type="button" data-gallery-step="-1" aria-label="Desplazar proyectos hacia la izquierda" data-i18n-aria="galleryLeft">←</button>
+						<button class="gallery-arrow" type="button" data-gallery-step="1" aria-label="Desplazar proyectos hacia la derecha" data-i18n-aria="galleryRight">→</button>
 					</div>
 				</div>
 
-				<div class="project-track" role="region" tabindex="0" aria-label="Galería horizontal de proyectos">
-					<button class="project-card" type="button" data-project-title="BUNRAKU" data-project-description="Brawler multijugador de ritmo rápido para hasta 8 jugadores, con combates ninja en arenas locales o en línea." data-project-areas="Diseño de niveles 2D · Pruebas de jugabilidad · QA" data-project-url="https://store.steampowered.com/app/2519170/Bunraku/" data-project-image="/bunraku-screenshot.png" data-project-link-label="Ver en Steam" style="--project-color: #54277b" aria-label="Abrir ficha del proyecto BUNRAKU">
+				<div class="project-track" role="region" tabindex="0" aria-label="Galería horizontal de proyectos" data-i18n-aria="projectGallery">
+					<button class="project-card" type="button" data-project-title="BUNRAKU" data-project-description="Brawler multijugador de ritmo rápido para hasta 8 jugadores, con combates ninja en arenas locales o en línea." data-project-description-en="Fast-paced multiplayer brawler for up to 8 players, featuring ninja combat in local or online arenas." data-project-areas="Diseño de niveles 2D · Pruebas de jugabilidad · QA" data-project-areas-en="2D level design · Playtesting · QA" data-project-url="https://store.steampowered.com/app/2519170/Bunraku/" data-project-image="/bunraku-screenshot.png" data-project-link-label="Ver en Steam" data-project-link-label-en="View on Steam" style="--project-color: #54277b" aria-label="Abrir ficha del proyecto BUNRAKU" data-i18n-aria="projectCard0">
 						<span class="project-card-art"></span>
 						<span class="project-card-meta"><span>PROJECT_001</span><span>↗</span></span>
 						<strong>BUNRAKU</strong>
-						<span class="project-card-note">Brawler multijugador · Hasta 8 jugadores</span>
+						<span class="project-card-note" data-i18n="projectNote0">Brawler multijugador · Hasta 8 jugadores</span>
 					</button>
-					<button class="project-card" type="button" data-project-title="The Librarian's Curse" data-project-description="Proyecto de game jam de Generation con temática ATRAPADO EN UN BUCLE." data-project-areas="Artista UI · Programación UI e implementación" data-project-url="https://alospinar.itch.io/the-librarians-curse" data-project-image="/the-librarians-curse.png" data-project-link-label="Ver en itch.io" style="--project-color: #263b70" aria-label="Abrir ficha de The Librarian's Curse">
+					<button class="project-card" type="button" data-project-title="The Librarian's Curse" data-project-description="Proyecto de game jam de Generation con temática ATRAPADO EN UN BUCLE." data-project-description-en="Generation game jam project themed around TRAPPED IN A LOOP." data-project-areas="Artista UI · Programación UI e implementación" data-project-areas-en="UI artist · UI programming and implementation" data-project-url="https://alospinar.itch.io/the-librarians-curse" data-project-image="/the-librarians-curse.png" data-project-link-label="Ver en itch.io" data-project-link-label-en="View on itch.io" style="--project-color: #263b70" aria-label="Abrir ficha de The Librarian's Curse" data-i18n-aria="projectCard1">
 						<span class="project-card-art"></span>
 						<span class="project-card-meta"><span>PROJECT_002</span><span>↗</span></span>
 						<strong>THE LIBRARIAN'S CURSE</strong>
-						<span class="project-card-note">Game jam · ATRAPADO EN UN BUCLE</span>
+						<span class="project-card-note" data-i18n="projectNote1">Game jam · ATRAPADO EN UN BUCLE</span>
 					</button>
-					<button class="project-card" type="button" data-project-title="Totally normal 2d game" data-project-description="Proyecto de game jam de Generation con temática TWO WORLDS." data-project-areas="Programación de gameplay y UI · Implementación y debug" data-project-url="https://lordcriftey.itch.io/totally-normal-2d-game" data-project-image="/totally-normal-2d-game.png" data-project-link-label="Ver en itch.io" style="--project-color: #594125" aria-label="Abrir ficha de Totally normal 2d game">
+					<button class="project-card" type="button" data-project-title="Totally normal 2d game" data-project-description="Proyecto de game jam de Generation con temática TWO WORLDS." data-project-description-en="Generation game jam project themed around TWO WORLDS." data-project-areas="Programación de gameplay y UI · Implementación y debug" data-project-areas-en="Gameplay and UI programming · Implementation and debugging" data-project-url="https://lordcriftey.itch.io/totally-normal-2d-game" data-project-image="/totally-normal-2d-game.png" data-project-link-label="Ver en itch.io" data-project-link-label-en="View on itch.io" style="--project-color: #594125" aria-label="Abrir ficha de Totally normal 2d game" data-i18n-aria="projectCard2">
 						<span class="project-card-art"></span>
 						<span class="project-card-meta"><span>PROJECT_003</span><span>↗</span></span>
 						<strong>TOTALLY NORMAL 2D GAME</strong>
-						<span class="project-card-note">Game jam · TWO WORLDS</span>
-					</button>
-					<button class="project-card" type="button" data-project-title="PROYECTO_004" data-project-description="Escribe aquí una breve descripción del proyecto y del mundo que construiste." data-project-areas="Diseño de niveles · Iluminación · Colaboración" data-project-url="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" style="--project-color: #31564d" aria-label="Abrir ficha del proyecto 4">
-						<span class="project-card-art"></span>
-						<span class="project-card-meta"><span>PROJECT_004</span><span>↗</span></span>
-						<strong>Nombre del proyecto</strong>
-						<span class="project-card-note">Haz clic para agregar detalles</span>
+						<span class="project-card-note" data-i18n="projectNote2">Game jam · TWO WORLDS</span>
 					</button>
 				</div>
 
-				<article class="project-detail" hidden aria-live="polite">
+				<dialog class="project-detail" aria-labelledby="project-detail-title" aria-live="polite">
 					<div class="project-detail-topbar">
 						<span class="detail-index">PROJECT_001</span>
-						<button class="detail-close" type="button" aria-label="Cerrar ficha del proyecto">×</button>
+						<button class="detail-close" type="button" aria-label="Cerrar ficha del proyecto" data-i18n-aria="closeProject" autofocus>×</button>
 					</div>
 					<div class="project-detail-content">
-						<div class="project-detail-media" role="img" aria-label="Espacio reservado para imagen o video del proyecto">
+						<div class="project-detail-media" role="img" aria-label="Espacio reservado para imagen o video del proyecto" data-i18n-aria="projectMedia">
 							<img class="detail-image" alt="" hidden />
-							<div class="media-placeholder"><span>MEDIA_PLACEHOLDER</span><small>Reemplaza este bloque con una imagen o video</small></div>
+							<div class="media-placeholder"><span>MEDIA_PLACEHOLDER</span><small data-i18n="mediaPlaceholder">Reemplaza este bloque con una imagen o video</small></div>
 						</div>
 						<div class="project-detail-copy">
-							<p class="eyebrow">PROJECT OVERVIEW</p>
-							<h3 class="detail-title">Nombre del proyecto</h3>
+						<p class="eyebrow" data-i18n="projectOverview">PROJECT OVERVIEW</p>
+							<h3 class="detail-title" id="project-detail-title">Nombre del proyecto</h3>
 							<p class="detail-description">Escribe aquí una breve descripción del proyecto y del mundo que construiste.</p>
-							<p class="detail-label">MI PARTICIPACIÓN</p>
+							<p class="detail-label" data-i18n="myContribution">MI PARTICIPACIÓN</p>
 							<p class="detail-areas">Diseño de niveles · Blockout · Documentación</p>
-							<a class="detail-link" href="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" target="_blank" rel="noopener noreferrer">Ver proyecto <span>↗</span></a>
+							<a class="detail-link" href="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" target="_blank" rel="noopener noreferrer"><span data-i18n="viewProject">Ver proyecto</span> <span>↗</span></a>
 						</div>
 					</div>
 					<div class="project-detail-navigation">
-						<button class="detail-step" type="button" data-detail-step="-1">← Anterior</button>
-						<span class="detail-count">01 / 04</span>
-						<button class="detail-step" type="button" data-detail-step="1">Siguiente →</button>
+						<button class="detail-step" type="button" data-detail-step="-1" data-i18n="previous">← Anterior</button>
+						<span class="detail-count">01 / 03</span>
+						<button class="detail-step" type="button" data-detail-step="1" data-i18n="next">Siguiente →</button>
 					</div>
-				</article>
+				</dialog>
 			</section>
 
 			<section class="about" id="about">
 				<div class="about-heading">
-					<p class="eyebrow">02 / THE CREATOR</p>
-					<h2>Diseñar espacios.<br /><span>Crear experiencias.</span></h2>
+					<p class="eyebrow" data-i18n="sectionAbout">02 / THE CREATOR</p>
+					<h2 data-i18n-html="aboutTitle">Diseñar espacios.<br /><span>Crear experiencias.</span></h2>
 				</div>
 
 				<div class="about-layout">
 					<div class="about-profile">
-						<h3>Perfil profesional</h3>
-						<p>Como desarrollador de videojuegos formado en el SENA y en el bootcamp de Unity de Generation, he tenido la oportunidad de trabajar tanto en estudios independientes como en Efecto Studios. Me especializo en dar forma a espacios jugables, abarcando desde los primeros blockouts hasta la integración de assets y pruebas de jugabilidad.</p>
-						<p>Lo que más disfruto es el proceso creativo de iterar un nivel hasta que se sienta intuitivo, vivo y atractivo para quien lo juega. Aunque mi fuerte está en el diseño técnico de niveles, conservo una mentalidad generalista que me permite apoyar en distintas áreas del desarrollo según lo que requiera el proyecto.</p>
+						<h3 data-i18n="profileTitle">Perfil profesional</h3>
+						<p data-i18n="profileParagraph1">Como desarrollador de videojuegos formado en el SENA y en el bootcamp de Unity de Generation, he tenido la oportunidad de trabajar tanto en estudios independientes como en Efecto Studios. Me especializo en dar forma a espacios jugables, abarcando desde los primeros blockouts hasta la integración de assets y pruebas de jugabilidad.</p>
+						<p data-i18n="profileParagraph2">Lo que más disfruto es el proceso creativo de iterar un nivel hasta que se sienta intuitivo, vivo y atractivo para quien lo juega. Aunque mi fuerte está en el diseño técnico de niveles, conservo una mentalidad generalista que me permite apoyar en distintas áreas del desarrollo según lo que requiera el proyecto.</p>
 						<p class="signature">Daniel Guzmán <span>— Gasmoon</span></p>
 					</div>
 
 					<div class="about-card about-skills">
 						<div class="about-card-heading">
-							<p class="eyebrow">CAPACIDADES</p>
-							<h3>Skills</h3>
+							<p class="eyebrow" data-i18n="capabilities">CAPACIDADES</p>
+							<h3 data-i18n="skills">Skills</h3>
 						</div>
 						<div class="skill-groups">
 							<div class="skill-group">
-								<h4>Diseño de niveles</h4>
+								<h4 data-i18n="skillLevelDesign">Diseño de niveles</h4>
 								<div class="skill-tags">
-									<span>Blockout y Greyboxing</span>
-									<span>Narrativa ambiental</span>
-									<span>Pacing y flujo espacial</span>
-									<span>Diseño de encuentros</span>
-									<span>Playtesting e iteración</span>
-									<span>Documentación (LDD)</span>
+									<span data-i18n="skill1">Blockout y Greyboxing</span>
+									<span data-i18n="skill2">Narrativa ambiental</span>
+									<span data-i18n="skill3">Pacing y flujo espacial</span>
+									<span data-i18n="skill4">Diseño de encuentros</span>
+									<span data-i18n="skill5">Playtesting e iteración</span>
+									<span data-i18n="skill6">Documentación (LDD)</span>
 								</div>
 							</div>
 							<div class="skill-group">
-								<h4>Herramientas</h4>
+								<h4 data-i18n="tools">Herramientas</h4>
 								<div class="skill-tags">
 									<span>Unity</span>
 									<span>Unreal Engine</span>
@@ -170,13 +176,13 @@
 								</div>
 							</div>
 							<div class="skill-group">
-								<h4>Habilidades técnicas</h4>
+								<h4 data-i18n="technicalSkills">Habilidades técnicas</h4>
 								<div class="skill-tags">
 									<span>C# (Unity)</span>
 									<span>Blueprints (Unreal)</span>
-									<span>QA y reporte de bugs</span>
-									<span>Prototipado de mecánicas</span>
-									<span>Debugging en motor</span>
+									<span data-i18n="skillQa">QA y reporte de bugs</span>
+									<span data-i18n="skillPrototype">Prototipado de mecánicas</span>
+									<span data-i18n="skillDebug">Debugging en motor</span>
 								</div>
 							</div>	
 					</div>
@@ -184,18 +190,18 @@
 
 					<div class="about-card about-links">
 						<div class="about-card-heading">
-							<p class="eyebrow">CONTACTO Y CV</p>
-							<h3>Enlaces</h3>
+							<p class="eyebrow" data-i18n="contactAndCv">CONTACTO Y CV</p>
+							<h3 data-i18n="links">Enlaces</h3>
 						</div>
 						<div class="about-links-list">
 							<a class="about-link" href="https://www.linkedin.com/in/daniel-alejandro-guzman-prada-5954bb2b8/" target="_blank" rel="noopener noreferrer">
-								<span>LinkedIn</span><span>Visita mi perfil ↗</span>
+								<span>LinkedIn</span><span data-i18n="visitProfile">Visita mi perfil ↗</span>
 							</a>
 							<a class="about-link" href="mailto:danguzp3216@gmail.com">
-								<span>Correo electrónico</span><span>danguzp3216@gmail.com ↗</span>
+								<span data-i18n="email">Correo electrónico</span><span>danguzp3216@gmail.com ↗</span>
 							</a>
 							<a class="about-link about-cv-link" href="/Daniel_Alejandro_Guzman_CV.pdf" download="Daniel_Alejandro_Guzman_CV.pdf">
-								<span>Currículum</span><span>Descargar CV (PDF) ↓</span>
+								<span data-i18n="resume">Currículum</span><span data-i18n="downloadResume">Descargar CV (PDF) ↓</span>
 							</a>
 						</div>
 					</div>
@@ -205,7 +211,7 @@
 
 		<footer>
 			<a class="brand" href="#home">GASMOON<span>.</span></a>
-			<p>Diseñado con intención. Construido para explorar.</p>
+			<p data-i18n="footerTagline">Diseñado con intención. Construido para explorar.</p>
 			<span>© 2026 DANIEL GUZMÁN</span>
 		</footer>
 	</body>
@@ -287,17 +293,44 @@
 
 <script>
 	const projectCards = Array.from(document.querySelectorAll<HTMLButtonElement>(".project-card"));
-	const projectDetail = document.querySelector<HTMLElement>(".project-detail");
+	const projectTrack = document.querySelector<HTMLElement>(".project-track");
+	const projectDetail = document.querySelector<HTMLDialogElement>(".project-detail");
 	let galleryIndex = 0;
 	let selectedProjectIndex = 0;
 
-	const showProject = (index: number, scrollToCard = true, scrollToDetail = false) => {
+	const loadProjectCardArt = (card: HTMLButtonElement) => {
+		const imagePath = card.dataset.projectImage;
+		const cardArt = card.querySelector<HTMLElement>(".project-card-art");
+		if (!imagePath || !cardArt || cardArt.dataset.imageLoaded === "true") return;
+		cardArt.style.backgroundImage = `url("${imagePath}")`;
+		cardArt.dataset.imageLoaded = "true";
+	};
+
+	const projectArtObserver = projectTrack && "IntersectionObserver" in window
+		? new IntersectionObserver((entries, observer) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+					loadProjectCardArt(entry.target as HTMLButtonElement);
+					observer.unobserve(entry.target);
+				});
+			}, { root: projectTrack, rootMargin: "0px 120px", threshold: 0 })
+		: null;
+
+	if (projectArtObserver) {
+		projectCards.forEach((card) => projectArtObserver.observe(card));
+	} else {
+		projectCards.forEach(loadProjectCardArt);
+	}
+
+	const showProject = (index: number) => {
 		if (!projectCards.length || !projectDetail) return;
 		selectedProjectIndex = (index + projectCards.length) % projectCards.length;
 		const card = projectCards[selectedProjectIndex];
+		loadProjectCardArt(card);
+		const languageSuffix = document.documentElement.lang === "en" ? "En" : "";
 		const title = card.dataset.projectTitle ?? "PROYECTO";
-		const description = card.dataset.projectDescription ?? "Añade una descripción para este proyecto.";
-		const areas = card.dataset.projectAreas ?? "Añade aquí tu participación.";
+		const description = card.dataset[`projectDescription${languageSuffix}`] ?? card.dataset.projectDescription ?? "Añade una descripción para este proyecto.";
+		const areas = card.dataset[`projectAreas${languageSuffix}`] ?? card.dataset.projectAreas ?? "Añade aquí tu participación.";
 		const url = card.dataset.projectUrl ?? "#";
 
 		projectDetail.querySelector(".detail-index")!.textContent = title;
@@ -306,7 +339,7 @@
 		projectDetail.querySelector(".detail-areas")!.textContent = areas;
 		const projectLink = projectDetail.querySelector<HTMLAnchorElement>(".detail-link")!;
 		projectLink.href = url;
-		projectLink.firstChild!.textContent = `${card.dataset.projectLinkLabel ?? "Ver proyecto"} `;
+		projectLink.querySelector("[data-i18n='viewProject']")!.textContent = card.dataset[`projectLinkLabel${languageSuffix}`] ?? card.dataset.projectLinkLabel ?? "Ver proyecto";
 		const media = projectDetail.querySelector<HTMLElement>(".project-detail-media")!;
 		media.style.backgroundColor = card.style.getPropertyValue("--project-color");
 		const image = projectDetail.querySelector<HTMLImageElement>(".detail-image")!;
@@ -316,27 +349,20 @@
 		placeholder.hidden = Boolean(imagePath);
 		if (imagePath) {
 			image.src = imagePath;
-			image.alt = `Captura de ${title}`;
+			image.alt = document.documentElement.lang === "en" ? `Screenshot of ${title}` : `Captura de ${title}`;
 		} else {
 			image.removeAttribute("src");
 			image.alt = "";
 		}
-		const cardArt = card.querySelector<HTMLElement>(".project-card-art");
-		if (cardArt && imagePath) cardArt.style.backgroundImage = `url("${imagePath}")`;
 		projectDetail.querySelector(".detail-count")!.textContent = `${String(selectedProjectIndex + 1).padStart(2, "0")} / ${String(projectCards.length).padStart(2, "0")}`;
-		projectDetail.hidden = false;
-
-		if (scrollToCard) card.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-		if (scrollToDetail) requestAnimationFrame(() => projectDetail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
+		if (!projectDetail.open) projectDetail.showModal();
 	};
 
 	projectCards.forEach((card, index) => {
-		const imagePath = card.dataset.projectImage;
-		const cardArt = card.querySelector<HTMLElement>(".project-card-art");
-		if (cardArt && imagePath) cardArt.style.backgroundImage = `url("${imagePath}")`;
 		card.addEventListener("click", () => {
 			galleryIndex = index;
-			showProject(index, false, true);
+			loadProjectCardArt(card);
+			showProject(index);
 		});
 	});
 
@@ -354,41 +380,17 @@
 	});
 
 	projectDetail?.querySelector<HTMLButtonElement>(".detail-close")?.addEventListener("click", () => {
-		projectDetail.hidden = true;
+		projectDetail.close();
+	});
+
+	projectDetail?.addEventListener("close", () => {
 		projectCards[selectedProjectIndex]?.focus();
 	});
 </script>
 
 <script>
-	const parallaxImages = Array.from(document.querySelectorAll<HTMLImageElement>(".parallax-art img"));
-	let parallaxFrame = false;
-
-	if (parallaxImages.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-		const updateParallax = () => {
-			const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-			const progress = maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 0;
-
-			parallaxImages.forEach((image) => {
-				const imageHeight = image.getBoundingClientRect().height;
-				const lowerLimit = Math.min(0, window.innerHeight - imageHeight);
-				image.style.transform = `translate3d(0, ${lowerLimit * progress}px, 0)`;
-			});
-		};
-
-		const scheduleParallax = () => {
-			if (parallaxFrame) return;
-			parallaxFrame = true;
-			window.requestAnimationFrame(() => {
-				updateParallax();
-				parallaxFrame = false;
-			});
-		};
-
-		window.addEventListener("scroll", scheduleParallax, { passive: true });
-		window.addEventListener("resize", scheduleParallax);
-		parallaxImages.forEach((image) => image.addEventListener("load", scheduleParallax, { once: true }));
-		scheduleParallax();
-	}
+	import "../language-switch";
+	import "../theme-switch";
 </script>
 
 <style>
@@ -436,23 +438,24 @@
 	}
 
 	.parallax-art {
-		position: fixed;
+		position: absolute;
 		inset: 0;
 		z-index: -2;
-		overflow: hidden;
 		pointer-events: none;
 	}
 
 	.parallax-art img {
 		position: absolute;
-		top: 0;
-		right: -3vw;
-		width: 80vw;
-		height: auto;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+		object-position: center;
 		opacity: 1;
-		filter: drop-shadow(0 0 26px #2528ff88);
-		will-change: transform;
 	}
+
+	.parallax-layer--night { z-index: 0; }
+	.parallax-layer--light-theme { z-index: 1; }
 
 
 	a {
@@ -467,6 +470,12 @@
 		justify-content: space-between;
 		padding: 28px 8%;
 		border-bottom: 1px solid #ffffff12;
+	}
+
+	.header-controls {
+		display: inline-flex;
+		align-items: center;
+		gap: 14px;
 	}
 
 	.brand {
@@ -486,6 +495,93 @@
 		gap: 24px;
 		font-size: 16px;
 		color: #d3cbdc;
+	}
+
+	.language-switch {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		color: #9c8eab;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+
+	.language-option {
+		padding: 7px 5px;
+		border: 0;
+		background: transparent;
+		color: #aaa0b6;
+		font: inherit;
+		letter-spacing: inherit;
+		cursor: pointer;
+		transition: color 180ms ease, text-shadow 180ms ease;
+	}
+
+	.language-option:hover,
+	.language-option.is-active {
+		color: #e8d5ff;
+		text-shadow: 0 0 10px #b78be899;
+	}
+
+	.language-option:focus-visible {
+		outline: 1px solid #b78be8;
+		outline-offset: 3px;
+	}
+
+	.theme-toggle {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 7px 5px;
+		border: 0;
+		background: transparent;
+		color: #c7b8d4;
+		cursor: pointer;
+	}
+
+	.theme-icon {
+		font-size: 13px;
+		line-height: 1;
+	}
+
+	.theme-toggle-track {
+		position: relative;
+		width: 34px;
+		height: 18px;
+		border: 1px solid #a77bd988;
+		border-radius: 999px;
+		background: #7b4ca52e;
+		box-shadow: inset 0 0 8px #9d4dff1c;
+		transition: background 180ms ease, border-color 180ms ease;
+	}
+
+	.theme-toggle-thumb {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #d9b8ff;
+		box-shadow: 0 0 8px #b78be8aa;
+		transition: transform 180ms ease, background 180ms ease;
+	}
+
+	.theme-toggle[aria-checked="true"] .theme-toggle-track {
+		border-color: #ffc45e;
+		background: #e58b263d;
+	}
+
+	.theme-toggle[aria-checked="true"] .theme-toggle-thumb {
+		transform: translateX(16px);
+		background: #ffe09a;
+		box-shadow: 0 0 8px #ffc45eaa;
+	}
+
+	.theme-toggle:focus-visible {
+		outline: 1px solid #b78be8;
+		outline-offset: 3px;
+		border-radius: 3px;
 	}
 
 	nav a,
@@ -905,16 +1001,24 @@
 	}
 
 	.project-detail {
-		margin-top: 16px;
+		position: fixed;
+		inset: 0;
+		width: min(1000px, calc(100vw - 32px));
+		max-height: min(90vh, 900px);
+		max-height: min(90dvh, 900px);
+		margin: auto;
+		overflow-y: auto;
 		padding: 22px;
 		border: 1px solid #c58aff99;
+		border-radius: 4px;
 		background: linear-gradient(135deg, #1b102980, #0c091380 65%, #130d1d80);
+		color: #eee6f5;
 		box-shadow: 0 0 24px #9d4dff3b, 0 0 48px #7429d522;
 		animation: detail-appear 360ms ease both;
 	}
 
-	.project-detail[hidden] {
-		display: none;
+	.project-detail::backdrop {
+		background: #05030bd9;
 	}
 
 	.project-detail-topbar {
@@ -1215,6 +1319,14 @@
 			gap: 12px;
 		}
 
+		.site-header {
+			flex-wrap: wrap;
+		}
+
+		.header-controls {
+			gap: 8px;
+		}
+
 		.brand {
 			font-size: 14px;
 			letter-spacing: 2px;
@@ -1223,6 +1335,15 @@
 		nav {
 			gap: 8px;
 			font-size: 12px;
+		}
+
+		.language-switch {
+			gap: 2px;
+			font-size: 11px;
+		}
+
+		.language-option {
+			padding: 7px 3px;
 		}
 
 		.nav-section-link {
@@ -1294,6 +1415,9 @@
 
 		.project-detail {
 			padding: 16px;
+			width: calc(100vw - 24px);
+			max-height: calc(100vh - 24px);
+			max-height: calc(100dvh - 24px);
 		}
 
 		.project-detail-content {
@@ -1323,12 +1447,6 @@
 			margin-bottom: 24px;
 		}
 
-		.parallax-art img {
-			right: -8vw;
-			width: 90vw;
-		}
-
-	
 
 		footer {
 			flex-wrap: wrap;
